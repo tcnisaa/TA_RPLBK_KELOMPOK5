@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchidées</title>
+
+    <!-- Font -->
+    <link href="https://fonts.cdnfonts.com/css/mango-vintage-personal-use-only" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/alice-2" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icon.png">
+</head>
+
+<body class="background-color">
+    <!-- Components -->
+    <div id="header"></div>
+    <div id="home"></div>
+    <div id="products"></div>
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script type="module">
+        import componentLoader from './JS/component-loader.js';
+
+        const components = [
+            { id: "header", path: "components/header.html" },
+            { id: "home", path: "components/home.html" }, <!-- Memuat home.html -->
+            { id: "products", path: "components/products.html" },
+            { id: "footer", path: "components/footer.html" }
+        ];
+
+        // Load all components using the singleton instance
+        componentLoader.loadAll(components);
+    </script>
+</body>
+
+</html>
